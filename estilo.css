@@ -1,0 +1,186 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #0b1a2d;
+    color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.container {
+    width: 100%;
+    max-width: 800px;
+    background-color: #0d223b;
+    border: 1px solid #143760;
+    border-radius: 8px;
+    padding: 30px;
+}
+
+.header {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.header .icon {
+    font-size: 24px;
+    color: #00d2ff;
+    margin-bottom: 10px;
+}
+
+.header h1 {
+    font-size: 24px;
+    font-weight: normal;
+    margin-bottom: 8px;
+}
+
+.header p {
+    color: #a0aec0;
+    font-size: 14px;
+}
+
+/* Área da Senha Gerada */
+.senha-container {
+    background: linear-gradient(90deg, #005691, #007cc7);
+    padding: 15px 20px;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    font-size: 18px;
+    margin-bottom: 25px;
+}
+
+.senha-container span {
+    color: #b3e5fc;
+    font-size: 14px;
+}
+
+.senha-container strong {
+    letter-spacing: 1px;
+    word-break: break-all;
+}
+
+/* Painel de Personalização */
+.painel-personalizacao {
+    border: 1px solid #1c4a7c;
+    border-radius: 6px;
+    padding: 20px;
+}
+
+.painel-personalizacao h2 {
+    font-size: 18px;
+    font-weight: normal;
+    margin-bottom: 20px;
+}
+
+.grid-config {
+    display: grid;
+    grid-template-columns: 1fr 1.2fr 1.3fr;
+    gap: 20px;
+}
+
+@media (max-width: 768px) {
+    .grid-config {
+        grid-template-columns: 1fr;
+    }
+}
+
+.col label {
+    display: block;
+    color: #a0aec0;
+    font-size: 13px;
+    font-weight: bold;
+    margin-bottom: 12px;
+}
+
+/* Contador (+ e -) */
+.contador {
+    display: inline-flex;
+    align-items: center;
+    border: 1px solid #1c4a7c;
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.contador button {
+    background: transparent;
+    border: none;
+    color: #00d2ff;
+    font-size: 18px;
+    width: 35px;
+    height: 35px;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.contador button:hover {
+    background-color: #143760;
+}
+
+.contador span {
+    width: 45px;
+    text-align: center;
+    font-size: 16px;
+    border-left: 1px solid #1c4a7c;
+    border-right: 1px solid #1c4a7c;
+    line-height: 35px;
+}
+
+/* Checkboxes */
+.checkboxes {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.checkboxes label {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: #ffffff;
+    font-weight: normal;
+    font-size: 14px;
+    margin-bottom: 0;
+    cursor: pointer;
+}
+
+/* Barra de Força */
+.barra-forca-container {
+    background-color: #0a1526;
+    height: 12px;
+    border-radius: 3px;
+    overflow: hidden;
+    margin-bottom: 5px;
+}
+
+.barra {
+    height: 100%;
+    width: 0%;
+    transition: width 0.3s, background-color 0.3s;
+}
+
+.barra.fraca { width: 33%; background-color: #e53e3e; }
+.barra.media { width: 66%; background-color: #ecc94b; }
+.barra.forte { width: 100%; background-color: #38a169; }
+
+.labels-forca {
+    display: flex;
+    justify-content: space-between;
+    font-size: 11px;
+    color: #718096;
+    margin-bottom: 15px;
+}
+
+.tempo-descobrir {
+    font-size: 11px;
+    color: #a0aec0;
+    line-height: 1.4;
+}
