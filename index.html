@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerador de Senhas</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="icon">🔒</div>
+            <h1>Gerador de senhas</h1>
+            <p>Gere instantaneamente uma senha aleatória e segura</p>
+        </div>
+
+        <div class="senha-container">
+            <span>Senha</span>
+            <strong id="senha-gerada">BCOSXUWIOESD</strong>
+        </div>
+
+        <div class="painel-personalizacao">
+            <h2>Personalize sua senha</h2>
+            
+            <div class="grid-config">
+                <div class="col">
+                    <label>Número de caracteres</label>
+                    <div class="contador">
+                        <button id="btn-menos">-</button>
+                        <span id="qtd-caracteres">12</span>
+                        <button id="btn-mais">+</button>
+                    </div>
+                </div>
+
+                <div class="col">
+                    <label>Características da senha</label>
+                    <div class="checkboxes">
+                        <label><input type="checkbox" id="chk-maiusculas" checked> Letras maiúsculas</label>
+                        <label><input type="checkbox" id="chk-minusculas"> Letras minúsculas</label>
+                        <label><input type="checkbox" id="chk-numeros"> Números</label>
+                        <label><input type="checkbox" id="chk-simbolos"> Símbolos</label>
+                    </div>
+                </div>
+
+                <div class="col">
+                    <label>Força da senha</label>
+                    <div class="barra-forca-container">
+                        <div id="barra-forca" class="barra media"></div>
+                    </div>
+                    <div class="labels-forca">
+                        <span>Fraca</span>
+                        <span>Média</span>
+                        <span>Forte</span>
+                    </div>
+                    <p class="tempo-descobrir">
+                        Um computador pode levar até <span id="tempo-dias">11045</span> dias para descobrir essa senha.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
